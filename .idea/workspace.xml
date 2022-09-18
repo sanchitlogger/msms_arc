@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45da0716-a371-4f00-8610-5b9114c4b6a8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/real_time_update_clock.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/medical_shop-management_system.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/medical_shop-management_system.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/1.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/real_time_update_clock.py" beforeDir="false" afterPath="$PROJECT_DIR$/real_time_update_clock.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +70,7 @@
       <option name="presentableId" value="Default" />
       <updated>1662223880848</updated>
       <workItem from="1662223888458" duration="702000" />
-      <workItem from="1663479676864" duration="1689000" />
+      <workItem from="1663479676864" duration="3708000" />
     </task>
     <servers />
   </component>
@@ -90,6 +89,7 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/medical_shop_management_system$test.coverage" NAME="test Coverage Results" MODIFIED="1662224084547" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/medical_shop_management_system$real_time_update_clock.coverage" NAME="real_time_update_clock Coverage Results" MODIFIED="1663482292684" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/medical_shop_management_system$test.coverage" NAME="test Coverage Results" MODIFIED="1663481567633" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
