@@ -1,4 +1,4 @@
-
+"""
 import pyodbc
 server = 'sanchitlogger.database.windows.net' 
 database = 'logger' 
@@ -11,3 +11,15 @@ a = cursor.execute('''
                       VALUES ("Sanchit", 01 , "m");
                    ''')
 print(hello)
+"""
+import cryptography.fernet as fer
+password = input("Enter password: ").encode()
+a = fer.Fernet.generate_key()
+print(a)
+fernet = fer.Fernet(a)
+
+print(fernet)
+encrypted = fernet.encrypt(password)
+dec = fernet.decrypt(encrypted).decode()
+print(encrypted)
+print(dec)
