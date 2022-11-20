@@ -14,7 +14,9 @@ with con.connect(host="sanchitlogger-vm1.centralindia.cloudapp.azure.com",user="
         key = fer.Fernet.generate_key()
         fernet = fer.Fernet(key)
         encrypted = fernet.encrypt(password.encode())
-        cur.execute("INSERT INTO users (username, password, key) VALUES (%s, %s, %s)", (username, encrypted, key))
+        cur.execute("INSERT INTO users (f_name , l_name, username, gender, pass, secret) VALUES (%s, %s, %s, %s, %s, %s)", (f_name, l_name,username, gender, encrypted, key))
         db.commit()
         print("User created successfully")
+    
+    def user_login():
 
