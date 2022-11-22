@@ -11,7 +11,9 @@ with con.connect(host="sanchitlogger-vm1.centralindia.cloudapp.azure.com",user="
         gender = input("Enter gender(M/F): ").lower()
         username = input("Enter username: ")
         a = 1
-        while a<=4:
+        while a ==1:
+            global password1
+            global password2
             password1 = pas.getpass(prompt="Enter password: ")
             password2 = pas.getpass(prompt="Renter password: ")
             if password1 == password2:
@@ -21,13 +23,13 @@ with con.connect(host="sanchitlogger-vm1.centralindia.cloudapp.azure.com",user="
                 cur.execute("INSERT INTO users (f_name , l_name, username, gender, pass, secret) VALUES (%s, %s, %s, %s, %s, %s)", (f_name, l_name,username, gender, encrypted, key))
                 b = db.commit()
                 print("User created successfully")
-                print(b)
+                a = 0
             else:
                 print("Wrong Password. Try again!")
-                a +=1
+                a = 1
             #if a ==5:
             
-create_user()            
+    create_user()            
         
         
 """
