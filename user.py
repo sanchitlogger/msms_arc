@@ -3,9 +3,10 @@ from cryptography import fernet as fer
 import mysql.connector as con
 import getpass as pas
 
-with con.connect(host="sanchitlogger-vm1.centralindia.cloudapp.azure.com",user="sanchitlogger",password="Password@1234",database="msms") as db:
-    cur = db.cursor()
-    def create_user():
+def create_user():
+    with con.connect(host="sanchitlogger-vm1.centralindia.cloudapp.azure.com",user="sanchitlogger",password="Password@1234",database="msms") as db:
+        cur = db.cursor()
+    
         f_name = input("Enter first name: ")
         l_name = input("Enter last name: ")
         gender = input("Enter gender(M/F): ").lower()
@@ -28,12 +29,14 @@ with con.connect(host="sanchitlogger-vm1.centralindia.cloudapp.azure.com",user="
                 print("Wrong Password. Try again!")
                 a = 1
             #if a ==5:
-            
-    create_user()            
+                      
         
-        
-"""
-    def user_login():
+def user_login():
+     with con.connect(host="sanchitlogger-vm1.centralindia.cloudapp.azure.com",user="sanchitlogger",password="Password@1234",database="msms") as db:
+        cur = db.cursor()
         username = input("Enter username:")
-        cur.execute("")
-"""
+        a =cur.execute(f"select f_name from users where username = '{username}'")
+        b = cur.fetchone()
+        print(b)
+user_login()
+        
