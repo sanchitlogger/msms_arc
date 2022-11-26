@@ -1,0 +1,4 @@
+sanchitlogger-vm1.centralindia.cloudapp.azure.com
+sanchitlogger
+Password@1234
+msms
