@@ -9,7 +9,12 @@ passwd = file.readline().strip()
 dbs = file.readline().strip()
 
 
-def data_in():
+def partner_add():
     with con.connect(host=f"{host}", user=f"{user}",
                      password=f"{passwd}", database=f"{dbs}") as db:
         cur = db.cursor()
+        a = input("Enter name: ")
+        b = input("enter company legal name: ")
+        c = input("Enter Brand: ")
+
+        cur.execute
