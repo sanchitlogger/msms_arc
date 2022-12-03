@@ -1,0 +1,58 @@
+[
+  {
+    "Field": "f_name",
+    "Type": "varchar(20)",
+    "Null": "NO",
+    "Key": "",
+    "Default": null,
+    "Extra": ""
+  },
+  {
+    "Field": "l_name",
+    "Type": "varchar(20)",
+    "Null": "NO",
+    "Key": "",
+    "Default": null,
+    "Extra": ""
+  },
+  {
+    "Field": "username",
+    "Type": "varchar(20)",
+    "Null": "YES",
+    "Key": "UNI",
+    "Default": null,
+    "Extra": ""
+  },
+  {
+    "Field": "gender",
+    "Type": "enum('m','f')",
+    "Null": "YES",
+    "Key": "",
+    "Default": null,
+    "Extra": ""
+  },
+  {
+    "Field": "secret",
+    "Type": "varchar(500)",
+    "Null": "NO",
+    "Key": "",
+    "Default": null,
+    "Extra": ""
+  },
+  {
+    "Field": "id",
+    "Type": "int",
+    "Null": "NO",
+    "Key": "PRI",
+    "Default": null,
+    "Extra": "auto_increment"
+  },
+  {
+    "Field": "pass",
+    "Type": "varchar(500)",
+    "Null": "NO",
+    "Key": "",
+    "Default": null,
+    "Extra": ""
+  }
+]

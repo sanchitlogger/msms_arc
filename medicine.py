@@ -9,7 +9,3 @@ passwd = file.readline().strip()
 dbs = file.readline().strip()
 
 
-def data_in():
-    with con.connect(host=f"{host}", user=f"{user}",
-                     password=f"{passwd}", database=f"{dbs}") as db:
-        cur = db.cursor()
