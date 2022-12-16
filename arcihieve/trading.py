@@ -1,7 +1,8 @@
 import mysql.connector as con
 import datetime as dt
 import zoneinfo as zi
-
+from tkinter import *
+from tkinter import ttk
 file = open("db.txt", "r")
 host = file.readline().strip()
 user = file.readline().strip()
@@ -11,9 +12,11 @@ dbs = file.readline().strip()
 with con.connect(host=f"{host}", user=f"{user}",
                      password=f"{passwd}", database=f"{dbs}") as db:
 """
-db = con.connect(host=f"{host}", user=f"{user}", password=f"{passwd}", database=f"{dbs}")
-cur = db.cursor()
+#db = con.connect(host=f"{host}", user=f"{user}", password=f"{passwd}", database=f"{dbs}")
+#cur = db.cursor()
 
+
+root=Tk()
 
 def data_in(b, c, d, e, f, g, h, i):
     lt1 = []
@@ -41,7 +44,45 @@ def data_in(b, c, d, e, f, g, h, i):
 
     db.commit()
 
+def trades():
+    root.geometry('800x600+300+90')
+    root.title("MSMS - Trades")
+    head=Frame(root,width=800,height=170,highlightbackground="black",highlightthickness=3)
+    usr=Frame(head,width=200,height=170,highlightbackground="blue",highlightthickness=2)
+    today_info = Frame(head,width=200,height=170,highlightbackground="red",highlightthickness=2)
+    head.place(x=0,y=0)
+    usr.place(x=0,y=0)
+    today_info.place(x=600,y=0)
+    body3=Frame(root,width=800,height=430)
+    body3.place(y=170,x=0)
 
+    def enter():
+        form1=Frame(body3,height=430,width=677)
+        form1.place(y=0,x=0)
+        cb_tup=["hello","World"]
+        cb = ttk.Combobox(form1,values=cb_tup,state="readonly",width=10)
+        cb.set(cb_tup[0])
+        cb.place(x=10,y=10)
+    def view():
+        view1=Frame(body3,height=430,width=677,highlightbackground="orange",highlightthickness=2)
+        ttk.Treeview()
+
+    rig_butt=Frame(body3,height=430,width=122,highlightbackground="blue",highlightthickness=3)
+    rig_butt.place(y=0,x=678)
+    b1=Button(rig_butt,text="View",width=6)
+    b1.place(y=80,x=15)
+    b2=Button(rig_butt,text="Enter",width=6,command=enter)
+    b2.place(y=150,x=15)
+    b3=Button(rig_butt,text="Update",width=6)
+    b3.place(y=220,x=15)
+    b4=Button(rig_butt,text="Export",width=6)
+    b4.place(y=290,x=15)
+
+    
+
+trades()
+
+root.mainloop()
 """
 # this algo will be used to enter item after every recurring entry.
 a = 1
@@ -65,8 +106,9 @@ while a ==1:
         else:
             x = 11
             print("Please enter either 0 or 1")
-    print(b)
-"""
+    for i in b:        
+        print(i)
+
 
 
 def sync(lst):
@@ -89,3 +131,4 @@ def data_view():
         cur = db.cursor()
         b = cur.execute("insert into t")
         print(b)
+"""

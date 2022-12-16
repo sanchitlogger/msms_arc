@@ -86,4 +86,4 @@ def list_users(a):
         exe1 = cur.execute(f"select username,f_name,l_name,gender from users")
         b = cur.fetchmany(a)
         return b 
-user_login()   
+create_user()
